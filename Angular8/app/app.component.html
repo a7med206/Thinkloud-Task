@@ -1,0 +1,93 @@
+<header class="title">
+  <h1>Thinkloud Task</h1>
+<h2 >Phone Book</h2>
+</header>
+
+<div class="wd-100">
+<!-- new contact -->
+  <form class="newContact " (ngSubmit)="onSubmit(contactSubmit)"
+  #contactSubmit="ngForm">
+  <div class="wd-100">
+    <label for="name" class="labels">Name</label>
+    <input type="text" placeholder="please write your name"
+    required
+    minlength="3"
+    ngModel
+    name="name">
+    <span>Name should be more than 3 characters </span>
+  </div>
+  <div class="wd-100">
+    <label for="phoneNumber"  class="labels">Phone Number</label>
+    <input type="tel" placeholder="please write your number"
+    required
+    ngModel
+    name="mobileNumber">
+  </div>
+    <button type="submit" [disabled]='!contactSubmit.valid'> Submit</button>
+    <p *ngIf="numberExist">  This Number Already Exists </p>
+    <p *ngIf="contactSuccess"> Contact Saved Successfully  </p>
+  </form>
+
+  
+  <div class="bookAndSearch">  
+<!-- Search Forms -->
+<div class="search">
+<div class="searchForms">
+  <form class="searchForm" (ngSubmit)="nameSearch(searchByName)"
+       #searchByName="ngForm">
+    <input class="SearchInput" ngModel
+    name="searchName"
+    placeholder="search by name">
+  <button type="submit" ><i class="fas fa-search"></i></button>
+  </form>
+  <form class="searchForm" (ngSubmit)="numberSearch(searchByNumber)"
+  #searchByNumber="ngForm">
+    <input class="SearchInput" ngModel
+    name="mobileNumber"
+    placeholder="search by number">
+  <button type="submit" ><i class="fas fa-search"></i></button>
+  </form><br>
+  <div class="searchResult" >
+    <p *ngIf="searchName" class="searchName"> {{ contactName }}</p>
+    <p *ngIf="searchName" class="searchNumber">{{ contactNumber }}</p>
+    <p *ngIf="!searchName"> {{ searchMessage }} </p>
+  </div>
+  </div>
+</div>
+<!-- phone book -->
+  <div class="phoneBook">
+
+  <div *ngFor="let contact of loadedContacts"
+  class="contact">
+  <div class="contactInfo">
+  <p class="col contactName" > {{ contact.Name }}  </p>
+  <p class="col contactNumber" > {{ contact.phonenumber }} </p>
+</div>
+  <div class="col">
+  <a (click)="deleteContact(contact._id)" class="delete" title="delete"><i class="fas fa-trash-alt"></i></a>
+  <a (click)="updateContact(contact.Name,contact.phonenumber,contact._id)" class="delete" title="edit"><i class="far fa-edit"></i></a>
+</div>
+</div>
+</div>
+</div>
+ <!-- update form -->
+ <div class="Update">
+ <form *ngIf="isUpdated" class="updateContact"
+ (ngSubmit)="UpdateContact(contactUpdate)"
+#contactUpdate="ngForm">
+<input type="text"  [(ngModel)]="contactName"
+minlength="3"
+ngModel
+name="name"><br>
+<input type="tel"  [(ngModel)]="contactNumber"
+ngModel
+name="mobileNumber"><br>
+<input  type="hidden"  [(ngModel)]="contactID" 
+required
+ngModel
+name="id">
+<button type="submit" [disabled]='!contactUpdate.valid'> Update</button>
+<button type="button" (click)="closeForm()">Close</button>
+</form>
+</div>
+</div>

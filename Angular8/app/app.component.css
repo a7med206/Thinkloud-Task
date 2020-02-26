@@ -1,0 +1,313 @@
+
+.title {
+    text-align: center;
+background-color: #192734d4;
+color: #fff;
+padding: 1px;
+ }
+ .newContact{
+
+margin-right: 15px;
+margin-left: 15px;
+width: 35%;
+  
+ }
+ .newContact input {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 65%;
+  }
+  .newContact .labels{
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 10px;
+    width: 20%;
+  }
+  .newContact p{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 10px;
+    width: 70%;
+  }
+  .newContact  button[type=submit] {
+    width: 30%;
+    float: right;
+    margin-right: 20px;
+    background-color: #0ae;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 8px;
+    margin-left:30px ;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: fit-content;
+  }
+  .delete{
+    cursor: pointer;
+    color: #0ae;
+    padding: 10px;
+    border-radius: 10%;
+    margin-right: 5px;    
+    margin-left: 5px;
+
+  }
+  .wd-100{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .bookAndSearch{
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: 15px;
+    margin-left: 15px;
+    border: 1px  white solid;
+    margin-top: 2px;
+    width: 25%;
+    background-color: #fff;
+    margin-top: 2rem;
+  }
+  .phoneBook{
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: 15px;
+    margin-left: 15px;
+    overflow-y: scroll;
+    height: 20rem;
+    border: 1px  white solid;
+    margin-top: 2px;
+    width: 100%;
+    background-color: #fff;
+  }
+  #style-5::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+.phoneBook::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.phoneBook::-webkit-scrollbar-thumb
+{
+	background-color: #0ae;
+	
+	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+	                   color-stop(.5, rgba(255, 255, 255, .2)),
+					   color-stop(.5, transparent), to(transparent));
+}
+
+
+  .phoneBookHead{
+    display: flex;
+    flex-wrap: wrap;
+    width: 98%;
+    background-color: #192734d4;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .col{
+    width: 30%;
+    padding-left: 30px;
+    margin-top: 15px;
+    display: flex;
+    flex-flow: row;
+}
+
+  .contact{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    border-bottom: 1px solid #b8b4b4;
+
+  }
+  .contactInfo{
+    display: flex;
+    flex-flow: column;
+    width: 75%;
+  }
+  .contactName{
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 0px;
+  }
+  .contactNumber{
+    font-size: 1rem;
+    color: grey;
+  }
+  .Update{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: rgba(0, 0,0, 0.75);
+    z-index: 1001;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+  }
+  .updateContact{
+    width: 40%;
+    height: 100vh;
+    top: 5vh;
+    left: 5vh;
+    margin: 20% 25%
+  }
+  .Update input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .Update button {
+    width: 100%;
+    float: right;
+    background-color: #0ae;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: fit-content;
+  }
+  .search{
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 100%;
+  }
+  .searchForms{
+    display: flex;
+    flex-flow: column;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 15px;
+    max-width: 100%;
+    justify-content: center;
+  }
+  .searchForm{
+    margin-right: 0;
+    margin-left: 0;
+    min-width: 15rem;
+  }
+  .searchForm input {
+    width: 79%;
+    padding: 12px 40px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box
+  }
+  .searchForm  button[type=submit] {
+    width: 16%;
+    background-color: #0ae;
+    color: white;
+    padding: 12px 8px;
+    margin-top: 8px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .searchForm  button:disabled,
+button[disabled]{
+  opacity: 0.5;
+}
+  .searchResult{
+    color: black;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .searchResult p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .searchName{
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 0px;  }
+  .searchNumber{
+    font-size: 1rem;
+    color: grey; 
+   }
+
+
+
+@media(min-width:767px) and (max-width:1025px){
+      .newContact{
+        width: 50%;
+
+      }
+.bookAndSearch{
+  width: 35%;
+}
+.phoneBook{
+  height: 18rem;
+}
+    }
+  @media (max-width:769px){
+  .phoneBook{
+      width:100%
+    }
+   .newContact{
+    width: 100%;
+   }
+    .wd-100{
+      justify-content: start;
+    }
+    .wd-100 span{
+      font-size: 12px;
+
+    }
+    .newContact .labels{
+      margin-left: 0px;
+      width: 35%;
+        }
+    .newContact input {
+    width:100%;
+    }
+    .newContact  button[type=submit] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    }
+    .Update{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      background-color: rgba(0, 0,0, 0.75);
+      z-index: 1001;
+    }
+    .updateContact{
+        width: 90%;
+        height: 100vh;
+        top: 5vh;
+        left: 5vh;
+        margin: 20% 5%;
+    }
+    .Update input{
+      width: 100%;
+    }
+    .bookAndSearch{
+      width: 100%;
+    }
+  }
